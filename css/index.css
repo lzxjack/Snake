@@ -1,0 +1,72 @@
+/* 清楚默认样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 700 20px "Courier";
+}
+
+.main {
+    /* 主容器的样式 */
+    width: 360px;
+    height: 420px;
+    background-color: skyblue;
+    margin: 100px auto;
+    border: 5px solid #000;
+    border-radius: 10px;
+    display: flex;
+    /* 设置主轴纵轴 */
+    flex-flow: column;
+    /* 横轴水平 */
+    align-items: center;
+    /* 设置主轴对齐方式 */
+    justify-content: space-around;
+}
+
+.stage {
+    /* 游戏舞台 */
+    width: 304px;
+    height: 304px;
+    border: 2px solid #000;
+    position: relative;
+}
+
+#snake div {
+    /* 蛇容器里的样式 */
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border: 1px solid skyblue;
+    position: absolute;
+}
+
+.food {
+    /* 食物容器 */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    /* 横向排列，换行 */
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.food div {
+    width: 4px;
+    height: 4px;
+    background-color: red;
+    transform: rotate(45deg);
+}
+
+.score-panel {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
