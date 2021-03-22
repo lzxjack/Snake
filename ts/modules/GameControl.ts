@@ -30,13 +30,21 @@ class GameControl {
 
     // 键盘按下的相应函数
     keydownHandler(event: KeyboardEvent) {
-        // console.log(event.key);
         // 按下按键，按键存到方向里
-        // console.log(this);
-        // 判断用户是否按下了方向键
+        // 判断用户是否按下了正确的方向键
+        // console.log(event.key);
+        if (event.key === 'ArrowDown' ||
+            event.key === 'ArrowRight' ||
+            event.key === 'ArrowUp' ||
+            event.key === 'ArrowLeft' ||
+            event.key === 'Left' ||
+            event.key === 'Up' ||
+            event.key === 'Right' ||
+            event.key === 'Down'
+        ) { this.direction = event.key; }
 
-        this.direction = event.key;
-        // console.log(this.direction);
+
+
     }
 
     // 蛇移动,

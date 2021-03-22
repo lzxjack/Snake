@@ -20,7 +20,7 @@ class Snake {
     }
     // 设置蛇头坐标
     set X(value) {
-        // 新值和旧值相同，直接返回
+        // 新值和旧值相同，直接返回,不进行下面的操作
         if (this.X === value) return;
 
         // 判断是否撞墙，判断X的范围

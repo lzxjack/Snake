@@ -15,7 +15,16 @@ class GameControl {
         this.run();
     }
     keydownHandler(event) {
-        this.direction = event.key;
+        if (event.key === 'ArrowDown' ||
+            event.key === 'ArrowRight' ||
+            event.key === 'ArrowUp' ||
+            event.key === 'ArrowLeft' ||
+            event.key === 'Left' ||
+            event.key === 'Up' ||
+            event.key === 'Right' ||
+            event.key === 'Down') {
+            this.direction = event.key;
+        }
     }
     run() {
         let X = this.snake.X;
