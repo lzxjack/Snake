@@ -13,11 +13,11 @@ class Snake {
     set X(value) {
         if (this.X === value)
             return;
-        if (value < 0 || value > 290) {
+        if (value < 0 || value > 1470) {
             throw new Error('The Snake has died！');
         }
         if (this.body[1] && this.body[1].offsetLeft === value) {
-            value = value > this.X ? this.X - 10 : this.X + 10;
+            value = value > this.X ? this.X - 30 : this.X + 30;
         }
         this.moveBody();
         this.head.style.left = value + 'px';
@@ -26,11 +26,11 @@ class Snake {
     set Y(value) {
         if (this.Y === value)
             return;
-        if (value < 0 || value > 290) {
+        if (value < 0 || value > 810) {
             throw new Error('The Snake has died！');
         }
         if (this.body[1] && this.body[1].offsetTop === value) {
-            value = value > this.Y ? this.Y - 10 : this.Y + 10;
+            value = value > this.Y ? this.Y - 30 : this.Y + 30;
         }
         this.moveBody();
         this.head.style.top = value + 'px';

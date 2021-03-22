@@ -9,8 +9,8 @@ class Food {
         return this.element.offsetTop;
     }
     change() {
-        let top = Math.round(Math.random() * 29) * 10;
-        let left = Math.round(Math.random() * 29) * 10;
+        let top = Math.round(Math.random() * 49) * 30;
+        let left = Math.round(Math.random() * 27) * 30;
         this.element.style.left = top + 'px';
         this.element.style.top = left + 'px';
     }

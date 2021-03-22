@@ -20,12 +20,12 @@ class Food {
 
     // 修改食物位置的方法
     change() {
-        // 生成随机位置0~290，是10的倍数
-        // 蛇移动一次，移动1格，10px
-        // 因为是10的倍数，先生成0~29的随机数，再取整，包括0和29
-        // 再乘以10，就是10的倍数
-        let top: number = Math.round(Math.random() * 29) * 10;
-        let left: number = Math.round(Math.random() * 29) * 10;
+        // 生成随机位置0~1500，是30的倍数
+        // 蛇移动一次，移动1格，30px
+        // 因为是30的倍数，先生成0~50的随机数，再取整，包括0和50
+        // 再乘以30，就是30的倍数
+        let top: number = Math.round(Math.random() * 49) * 30;
+        let left: number = Math.round(Math.random() * 27) * 30;
 
         this.element.style.left = top + 'px';
         this.element.style.top = left + 'px';

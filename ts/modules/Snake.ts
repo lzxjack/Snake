@@ -24,7 +24,7 @@ class Snake {
         if (this.X === value) return;
 
         // 判断是否撞墙，判断X的范围
-        if (value < 0 || value > 290) {
+        if (value < 0 || value > 1470) {
             // 抛出异常，蛇撞墙了啊
             throw new Error('The Snake has died！')
         }
@@ -33,7 +33,7 @@ class Snake {
         if (this.body[1] && (this.body[1] as HTMLElement).offsetLeft === value) {
             // console.log(12312312312);
             // 发生掉头，改变方向
-            value = value > this.X ? this.X - 10 : this.X + 10;
+            value = value > this.X ? this.X - 30 : this.X + 30;
         }
 
         // 移动身子
@@ -47,13 +47,13 @@ class Snake {
         if (this.Y === value) return;
 
         // 判断是否撞墙，判断Y的范围
-        if (value < 0 || value > 290) {
+        if (value < 0 || value > 810) {
             // 抛出异常，蛇撞墙了啊
             throw new Error('The Snake has died！')
         }
         // 判断是否掉头
         if (this.body[1] && (this.body[1] as HTMLElement).offsetTop === value) {
-            value = value > this.Y ? this.Y - 10 : this.Y + 10;
+            value = value > this.Y ? this.Y - 30 : this.Y + 30;
         }
 
         // 移动身子
