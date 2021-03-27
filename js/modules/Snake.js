@@ -37,7 +37,7 @@ class Snake {
         this.checkHeadBody();
     }
     addBody() {
-        this.element.insertAdjacentHTML('beforeend', "<div></div>");
+        this.element.insertAdjacentHTML('beforeend', '<div></div>');
     }
     moveBody() {
         for (let i = this.body.length - 1; i > 0; i--) {

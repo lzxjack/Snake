@@ -7,7 +7,7 @@ class GameControl {
         this.direction = '';
         this.snake = new Snake();
         this.food = new Food();
-        this.scorePanel = new ScorePanel(9, 3);
+        this.scorePanel = new ScorePanel(8, 2);
         this.init();
     }
     init() {
@@ -30,20 +30,20 @@ class GameControl {
         let X = this.snake.X;
         let Y = this.snake.Y;
         switch (this.direction) {
-            case "ArrowUp":
-            case "Up":
+            case 'ArrowUp':
+            case 'Up':
                 Y -= 30;
                 break;
-            case "ArrowDown":
-            case "Down":
+            case 'ArrowDown':
+            case 'Down':
                 Y += 30;
                 break;
-            case "ArrowLeft":
-            case "Left":
+            case 'ArrowLeft':
+            case 'Left':
                 X -= 30;
                 break;
-            case "ArrowRight":
-            case "Right":
+            case 'ArrowRight':
+            case 'Right':
                 X += 30;
                 break;
         }
@@ -56,7 +56,7 @@ class GameControl {
             alert(e.message + 'GAME OVER!');
             this.isLive = false;
         }
-        this.isLive && setTimeout(this.run.bind(this), 300 - (this.scorePanel.level) * 30);
+        this.isLive && setTimeout(this.run.bind(this), 300 - this.scorePanel.level * 30);
     }
     checkEat(X, Y) {
         if (X === this.food.X && Y === this.food.Y) {
