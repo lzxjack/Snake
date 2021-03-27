@@ -1,7 +1,6 @@
-
 # 1. 游戏效果
 
-<a href="https://jacklzx.github.io/Snake/" target="_blank">[→ 点击此处预览效果 ←]</a>
+<a href="https://lzxjack.gitee.io/snake/" target="_blank">[→ 点击此处预览效果 ←]</a>
 
 -   方向键控制蛇的移动方向
 -   蛇吃到食物后，身体多出一格，分数`+1`，食物重新刷新位置
